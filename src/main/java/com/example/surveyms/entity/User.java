@@ -22,7 +22,7 @@ public class User {
 
     private String surname;
 
-    @OneToMany(mappedBy = "creator")
+    @OneToMany(mappedBy = "creator", fetch = FetchType.EAGER)
     private List<Survey> surveys;
 
     public User() {

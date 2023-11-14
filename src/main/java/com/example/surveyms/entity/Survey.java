@@ -18,5 +18,6 @@ public class Survey {
     private List<Question> questions;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "creator_id")
     private User creator;
 }

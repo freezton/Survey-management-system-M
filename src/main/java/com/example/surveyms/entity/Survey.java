@@ -16,4 +16,7 @@ public class Survey {
 
     @OneToMany(mappedBy = "survey")
     private List<Question> questions;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User creator;
 }
